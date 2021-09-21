@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
+<body>
+    <h1>LOGIN PAGE</h1>
+    <center>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="reg">
+                Email:<input type="email" name="Email"placeholder='email@gmail.com'><br>
+                Password:<input type="password" name="Password"placeholder='password'><br>
+                <a href="{% url 'logout' %}"><input type="submit" value="login" style="height: 48px; width: 170px; background: blue; font-family: 'Times New Roman', Times, serif; color: white; font-size: 30px; border-radius: 10px;"></a>
+            </div>
+        </form>
+        <div>
+            {% for message in messages %} 
+            <h2>{{message}}</h2>
+            {% endfor %}
+        </div>
+    </center>
+    <div class="link">
+        <a href="{% url 'register' %}">Go To Registration Form</a>
+    </div>
+    
+</body>
+</html>

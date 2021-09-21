@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: white;
+}
+h3{
+    border: blue;
+    padding: 50px;
+    
+    text-align: center;
+    background-color: rgb(0, 81, 255);
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+.button{
+    position: absolute;
+    top: 45%;
+    left: 45%;
+}

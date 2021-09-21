@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: white;
+}
+form{
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    margin-top: 5%;
+    font-size: 25px;
+    margin-right: 10px;
+}
+center{
+    width: 400px;
+    height: 500px;
+    background:rgb(4, 105, 105);
+    box-shadow: 0 0 40px rgba(5, 150, 218, 0.644);
+    /* color: rgb(255, 73, 73); */
+    border: rgb(255, 30, 0);
+    position: absolute;
+    left: 42%;
+    top: 30%;
+    color: yellowgreen;
+    border-radius: 25px;
+}
+input{
+    margin-top: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:steelblue;
+    width: 200px;
+    height: 25px;
+}
+h2{
+    margin-top: 10%;
+    letter-spacing: 2px;
+    font-size: 32px;
+}
+h1{
+    background-color:   blue;
+    color: white;
+    padding: 30px;
+    position: relative;
+    top: 3%;
+    right: 0%;
+    text-align: right;
+    font-size:60px;
+    letter-spacing: 3px;
+}
+.button{
+    margin-top: 35px
+}
+.link{
+    position: absolute;
+    top: 70%;
+    left: 35%;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'final.css'%}"
+<body>
+    <center>
+    <h1>Result Page</h1>
+        
+        <table border="1">
+            <div class="head"></div>
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>phone</th>
+                        <th>email</th>
+                        <th>password</th>
+                    </tr>
+                </thead>
+            </div>
+            <div class="body">
+                <tbody>
+                {% for d in data %}
+                    <tr>
+                        <td>{{d.name}}</td>
+                        <td>{{d.phone}}</td>
+                        <td>{{d.email}}</td>
+                        <td>{{d.password}}</td>
+                {% endfor %}
+
+                    </tr>
+                </tbody>
+            </div>
+        </table>
+    </center>
+    
+    <a href="{% url 'home' %}">Go Back</a>
+    
+</body>
+</html>

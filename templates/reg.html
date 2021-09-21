@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    {% load static %}
+</head>
+{% csrf_token %}
+<link rel="stylesheet" type="text/css" href="{% static 'reg.css' %}">
+<body>
+    <div class="back">
+
+    <h1>WELCOME BUDDY</h1>
+        <center>
+            <h2>Registration Page</h2>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="  Name" required><br/>
+                <input type="text" name="phone" placeholder="  Phone Number" pattern="[0-9]{10}" required><br/>
+                <input type="email" name="email" placeholder="  username@gmail.com" style="text-transform: lowercase;"required><br/>
+                <input type="password" name="password" placeholder="  Password" style="text-transform: none;" pattern="[[A-z,a-z,0-9]]{10}" required><br/>
+                <div class="button">
+                    <a href="{% url 'login' %}"><input type="submit" value='register' style="height: 35px; width: 120px; font-size: 15px; font-family: 'Times New Roman', Times, serif; border-radius: 10px;color: black; font: bold;"></a>
+                </div>
+            </form>
+        </center>
+    </div>
+    <div>
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </div>
+    <div class="link">
+        <a href="{% url 'login' %}">Go To LOGIN</a>
+        <a href="{% url 'list' %}">Go To Final</a>
+    </div>
+</body>
+</html>
